@@ -2,7 +2,7 @@
   remote_user: ubuntu
   become: yes
   tasks:
-    - name: Install Docker Dev
+    - name: Install Docker Master
       apt:
         name:
           - docker
@@ -14,7 +14,7 @@
       copy:
         src: docker-compose.yml
         dest: /home/ubuntu/
-    - name: Restart docker-compose dev
+    - name: Restart docker-compose master
       shell: |
           docker-compose stop
           docker-compose rm -f
