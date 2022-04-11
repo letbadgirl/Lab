@@ -16,7 +16,7 @@
         dest: /home/ubuntu/
     - name: Restart docker-compose master
       shell: |
-          docker-compose stop
+          docker-compose -f docker-compose-master.yml stop
           docker-compose rm -f
-          docker-compose pull
-          docker-compose up -d
+          docker-compose -f docker-compose-master.yml pull
+          docker-compose -f docker-compose-master.yml up -d
