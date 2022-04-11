@@ -1,0 +1,6 @@
+version: "3.4"
+services:
+  app:
+    image: trungnd31/nginx:latest
+    ports:
+      - "81:80"

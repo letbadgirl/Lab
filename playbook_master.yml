@@ -12,7 +12,7 @@
       shell: docker login -u "{{DOCKER_USERNAME}}" -p "{{DOCKER_PASSWORD}}"
     - name: Copy file
       copy:
-        src: docker-compose.yml
+        src: docker-compose-master.yml
         dest: /home/ubuntu/
     - name: Restart docker-compose master
       shell: |
